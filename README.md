@@ -56,6 +56,15 @@ Useful options:
    allowed to falsify the hypothesis: the evolved learner is not guaranteed to
    win for every seed or budget.
 
+## Results
+
+[`FINDINGS.md`](FINDINGS.md) reports a 40-seed sweep plus two controls, produced by the
+dependency-free scripts in [`analysis/`](analysis). Short version: the evolved learner beats the
+outcome-only baseline on 40/40 seeds, about 93% of that gain comes from the discovered inner reward
+rather than the learning hyperparameters, and every run discovers a positive `progress` weight. The
+outer loop itself, however, adds only +0.002 success rate over the best genome in its own generation
+0 — random search on the same budget does as well.
+
 ## Test
 
 ```bash
